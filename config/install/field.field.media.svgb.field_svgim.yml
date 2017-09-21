@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_svgim
+    - media.type.svgb
+  module:
+    - svg_image_field
+id: media.svgb.field_svgim
+field_name: field_svgim
+entity_type: media
+bundle: svgb
+label: Svg
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  alt_field: 0
+  alt_field_required: 1
+  title_field: 0
+  title_field_required: 0
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: svg_image_field

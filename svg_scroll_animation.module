@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Contains svg_scroll_animation.module.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Adds our template to the suggestions for media of svgb type.
+ */
+function svg_scroll_animation_theme_suggestions_media_alter(array &$suggestions, array $variables) {
+  $suggest = FALSE;
+  foreach ($suggestions as $suggestion) {
+    if ($suggest == FALSE) {
+      if (strstr($suggestion, "media__svgb") !== FALSE) {
+        $suggest = TRUE;
+      }
+    }
+  }
+
+  if ($suggest == TRUE) {
+    array_unshift($suggestions, 'media__media_svg_scroll_animation__full');
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function svg_scroll_animation_theme_registry_alter(&$theme_registry) {
+  // Adding this modules's templates to the bunch.
+  // Media--media-svg-scroll-animation--full.html.twig .
+  /**
+  *$theme_registry['svg_scroll_animation'] = $theme_registry['media'];
+  *$theme_registry['svg_scroll_animation']['theme path'] = drupal_get_path('module', 'svg_scroll_animation') . '/templates';
+  *$theme_registry['svg_scroll_animation']['path'] = drupal_get_path('module', 'svg_scroll_animation') . '/templates';
+  *$theme_registry['svg_scroll_animation']['template'] = 'media--media-svg-scroll-animation--full';
+  *$theme_registry['svg_scroll_animation']['type'] = "module";
+  */
+  $theme_registry['media']['template'] = 'media--media-svg-scroll-animation--full';
+  $theme_registry['media']['path'] = drupal_get_path('module', 'svg_scroll_animation') . '/templates';
+}
+
+function svg_scroll_animation_theme() {
+  return [
+    'svg_scroll_animation' => [
+      'render element' => 'elements',
+    ],
+  ];
+}

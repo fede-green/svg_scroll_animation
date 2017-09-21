@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_js_txt
+    - media.type.svgb
+id: media.svgb.field_js_txt
+field_name: field_js_txt
+entity_type: media
+bundle: svgb
+label: js
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,12 @@
+name: SVG Scroll Animation
+description: Offers an Animated SVG media with ScrollMagic.
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:svg_image_field
+  - drupal:color_field
+  - media
+  - content_moderation

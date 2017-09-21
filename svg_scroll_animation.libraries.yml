@@ -1,0 +1,13 @@
+
+svg_scroll_animation:
+  version: 1.x
+  css:
+    layout:
+      css/layout.css: {}
+  js:
+    js/ScrollMagic.js: {}
+    js/TweenMax.min.js: {}
+    js/animation.gsap.js: {}
+
+  dependencies:
+    - core/jquery

@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('svg_scroll_animation/svg_scroll_animation') }}
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ media.bundle()|clean_class,
+    not media.isPublished() ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode.id()|clean_class,
+  ]
+%}
+{% for item in content.field_background_color %}
+  {% if item.value|length > 0 %}
+  {% set col = item.value|first %}
+  {% set attributes = attributes.setAttribute("style", "background:" ~ col.color ~ "; opacity: " ~ col.opacity) %}
+  {% endif %}
+{% endfor %}
+{% set attributes = attributes.setAttribute('id', "trigger1") %}
+<article{{ attributes }}>
+
+  {% if content %}
+    {{ content | without('field_js_txt', 'field_svgf', 'field_background_color') }}
+  {% endif %}
+  {% for item in content.field_js_txt %}
+    {% if item.value|length > 0 %}
+      <script type="text/javascript">{{ item.value|raw }}</script>
+    {% endif %}
+  {% endfor %}
+</article>
