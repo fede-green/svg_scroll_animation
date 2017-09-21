@@ -5,3 +5,5 @@ with a background image and an SVG to be put on top of it. The SVG can be animat
 using ScrollMagic.
 
 Look at _js/example.js_ for an example of the animation.
+
+module created by federico prato for Siili Solutions.
