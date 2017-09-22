@@ -1,0 +1,9 @@
+{
+    "name": "fede-green/svg_scroll_animation",
+    "description": "Make media of type animated SVG.",
+    "type": "drupal-module",
+    "homepage": "https://github.com/fede-green/svg_scroll_animationn",
+    "support": {
+        "issues": "https://github.com/fede-green/svg_scroll_animation/issues"
+    }
+}
