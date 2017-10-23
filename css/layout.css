@@ -1,10 +1,9 @@
-
 #trigger1{
   position: relative;
   padding-bottom: 100%;
 }
-#trigger1 .field--type-image .field__item,
-#trigger1 .field--type-svg-image-field .field__item{
+#trigger1 .field--type-image img,
+#trigger1 .field--type-svg-image-field svg{
   position: absolute;
   top: 0;
   left:0;
