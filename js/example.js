@@ -21,7 +21,7 @@
      // Build tween.
      var tween = new TimelineMax()
          .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-         .add(TweenMax.to("path", 1, {stroke: "#FF5033", ease:Linear.easeNone}), 0);
+         .add(TweenMax.to($word, 1, {stroke: "#FF5033", ease:Linear.easeNone}), 0);
 
      // Build scene.
      var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 400, tweenChanges: true})
