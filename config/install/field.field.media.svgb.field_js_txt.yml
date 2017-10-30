@@ -8,10 +8,10 @@ id: media.svgb.field_js_txt
 field_name: field_js_txt
 entity_type: media
 bundle: svgb
-label: js
+label: 'JS txt'
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

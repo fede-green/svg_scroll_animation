@@ -10,14 +10,11 @@ id: media.svgb.field_background_color
 field_name: field_background_color
 entity_type: media
 bundle: svgb
-label: 'background color'
+label: 'Background color'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    color: '#ff5009'
-    opacity: '1'
+default_value: {  }
 default_value_callback: ''
 settings:
   opacity: 1

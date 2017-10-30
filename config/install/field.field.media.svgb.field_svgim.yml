@@ -10,7 +10,7 @@ id: media.svgb.field_svgim
 field_name: field_svgim
 entity_type: media
 bundle: svgb
-label: Svg
+label: 'SVG image'
 description: ''
 required: false
 translatable: false

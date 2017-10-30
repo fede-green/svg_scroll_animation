@@ -1,14 +1,16 @@
+uuid: 1ee997a1-e160-4280-8108-6ddb6fc0266a
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.svgb.field_background_color
     - field.field.media.svgb.field_js_txt
-    - field.field.media.svgb.field_media_image_1
+    - field.field.media.svgb.field_media_image
     - field.field.media.svgb.field_svgim
     - media.type.svgb
   module:
     - color_field
+    - ds
     - image
     - svg_image_field
 id: media.svgb.default
@@ -17,8 +19,8 @@ bundle: svgb
 mode: default
 content:
   field_background_color:
-    weight: 3
-    label: above
+    weight: 8
+    label: hidden
     settings:
       format: hex
       opacity: '1'
@@ -26,24 +28,24 @@ content:
     type: color_field_formatter_text
     region: content
   field_js_txt:
-    type: basic_string
-    weight: 2
-    region: content
-    label: above
+    weight: 9
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_media_image_1:
-    type: image
-    weight: 0
+    type: basic_string
     region: content
-    label: above
+  field_media_image:
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    type: image
+    weight: 6
+    region: content
   field_svgim:
-    weight: 1
-    label: above
+    weight: 7
+    label: hidden
     settings:
       inline: '1'
       width: '25'
@@ -51,10 +53,18 @@ content:
       enable_alt: '1'
       enable_title: '1'
       apply_dimensions: 0
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: svg_image_field_formatter
     region: content
 hidden:
   created: true
+  langcode: true
   thumbnail: true
   uid: true
